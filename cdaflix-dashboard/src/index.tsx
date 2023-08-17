@@ -21,13 +21,14 @@ const router = createBrowserRouter([
       {
         path: "films",
         element: <Films/>,
-        errorElement: <ErrorPage/>
+        errorElement: <ErrorPage/>,
       },
       {
         path: "addMovie",
         element: <Film/>,
         errorElement: <ErrorPage/>
       },
+      
     ]
   }
 ])

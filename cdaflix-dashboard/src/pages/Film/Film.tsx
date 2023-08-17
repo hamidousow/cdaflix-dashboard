@@ -13,7 +13,6 @@ export default function Film() {
     let responseBody: FilmDto = new FilmDto();
 
     function handleChange(event: any) {
-        console.log(event.target.files[0])
         setFile(event.target.files[0]);
         setImgPreview(URL.createObjectURL(file));
     }
@@ -28,11 +27,8 @@ export default function Film() {
         responseBody.setDescription(description);
         responseBody.setImg(file.files[0]);  
         responseBody.setActors(acteurs);
-        console.log(responseBody)
-
         FilmService.uploadFilm(responseBody);
     }
-
 
     return (
         <>

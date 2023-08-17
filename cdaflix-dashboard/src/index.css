@@ -81,13 +81,17 @@ table {
   color: var(--clr-white-light);
 }
 
-.navigation {
-  position: fixed;
+.navbar {
+  position: fixed !important;
   top: 0;
   right: 0;
   left: 265px;
   height: var(--navbar-height);
   background-color: var(--clr-white);
+}
+
+.form-control {
+  height: 100% !important;
 }
 
 .form-control {
