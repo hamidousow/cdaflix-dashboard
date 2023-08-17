@@ -7,11 +7,13 @@ export default function Root() {
     return (
         <>
         <div className="container-fluid gx-0 d-flex flex-row mx-0">
-            <AsideMenu/>
-            <div className="container">
-                <NavBar/>
-                <Outlet/>
-            </div>
+            <NavBar/>
+            <AsideMenu/>            
+            <div className="content-page content-page flex-grow-1">
+                <div className="container p-5">
+                    <Outlet/>
+                </div>                
+            </div> 
         </div>
         </>
     )

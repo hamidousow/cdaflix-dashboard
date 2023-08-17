@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavBar() {
     return (
-        <div>NavBar</div>
+        <div className='navigation px-4 py-2'>NavBar</div>
     )
 }
 

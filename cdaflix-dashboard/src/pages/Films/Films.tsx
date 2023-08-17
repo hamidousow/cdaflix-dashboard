@@ -1,25 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import FilmService from '../../services/FilmService';
 
 export default function Films() {
 
   const [films, setFilms] = useState([]);
-  const url = `http://localhost:8081/api/film/allMovies`
-
-  const getFilms = () => {
-    fetch(url)
-    .then((res) => {
-      return res.json()
-    })
-    .then((json) => {
-      setFilms(json);
-    })
-  }
 
   useEffect(() => {
-    getFilms()
-    console.log(films)
     
+    FilmService.getFilms().then((res) => {
+      setFilms(res.data)
+    })
   }, [])
 
   return (

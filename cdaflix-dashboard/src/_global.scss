@@ -1,6 +1,10 @@
 :root {
     --clr-blue-night: #1C2137;
+	--clr-white: #ffffff;
     --clr-white-light: #CED2E8;
+	--clr-grey-light: #F1F1F1;
+
+	--navbar-height: 55px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -49,4 +53,11 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.content-page {
+	height: calc(100vh - var(--navbar-height));
+	margin-top: var(--navbar-height);
+	margin-left: 265px;
+	background-color: var(--clr-grey-light);
 }
