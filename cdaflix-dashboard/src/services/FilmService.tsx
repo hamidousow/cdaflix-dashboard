@@ -19,7 +19,7 @@ class FilmService {
 
     findBy(args: string | undefined) {
         console.log(args)
-        let result = axios.get(BASE_API_URL+`findOne`, {
+        let result = axios.get(BASE_API_URL+`findByTitre`, {
                 params: { _titre: args}
             }            
         )
