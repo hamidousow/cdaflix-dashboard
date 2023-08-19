@@ -17,15 +17,12 @@ class FilmService {
         })
     }
 
-    findBy(args: string | undefined) {
-        console.log(args)
-        let result = axios.get(BASE_API_URL+`findByTitre`, {
-                params: { _titre: args}
-            }            
-        )
-        
+    findByTitre(args: string | undefined) {        
+        let result = axios.get(BASE_API_URL+'findByTitre', {
+            params: { titre: args}
+        })
+
         return result
-        
     }
 }
 

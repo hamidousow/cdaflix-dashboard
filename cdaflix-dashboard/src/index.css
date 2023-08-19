@@ -91,10 +91,6 @@ table {
 }
 
 .form-control {
-  height: 100% !important;
-}
-
-.form-control {
   height: 100px;
 }
 
@@ -119,4 +115,8 @@ textarea {
   background-color: var(--clr-blue-night);
   color: var(--clr-grey-light);
   border-radius: 5px;
+}
+
+.form-control {
+  height: 100% !important;
 }/*# sourceMappingURL=index.css.map */

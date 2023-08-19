@@ -14,7 +14,7 @@ export default function Film() {
 
     function handleChange(event: any) {
         setFile(event.target.files[0]);
-        setImgPreview(URL.createObjectURL(file));
+        setImgPreview(URL.createObjectURL(event.target.files[0]));
     }
 
     const inputChangeHandler = (setFunction: React.Dispatch<React.SetStateAction<string>>, event: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,8 +25,9 @@ export default function Film() {
         event.preventDefault();        
         responseBody.setTitre(titre);
         responseBody.setDescription(description);
-        responseBody.setImg(file.files[0]);  
+        responseBody.setImg(file);  
         responseBody.setActors(acteurs);
+        console.log(responseBody)
         FilmService.uploadFilm(responseBody);
     }
 

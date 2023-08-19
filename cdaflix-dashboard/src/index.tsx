@@ -8,6 +8,7 @@ import Root from './routes/Root';
 import ErrorPage from './pages/ErrorPage';
 import Films from './pages/Films/Films';
 import Film from './pages/Film/Film';
+import FilmService from './services/FilmService';
 
 const rootElement: any = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         path: "films",
         element: <Films/>,
         errorElement: <ErrorPage/>,
-      },
+      },       
       {
         path: "addMovie",
         element: <Film/>,
